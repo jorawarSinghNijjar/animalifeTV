@@ -1,0 +1,41 @@
+body {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $color-primary-dark;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  /* to avoid shakiness in animation */
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.43rem;
+    animation: zoomIn 2s ease-out;
+  }
+}
+
+.fa-dove {
+  color: $color-brown;
+  /* animation: flyTopRight 3s ease-out;
+    animation-fill-mode: forwards; */
+}
