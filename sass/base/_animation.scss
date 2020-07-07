@@ -57,4 +57,16 @@
       transform: translateX(40rem) translateY(-40rem) scale(5);
     }
   }
+
+  @keyframes fadeInRight{
+      0%{
+          opacity: 0;
+          transform: translateX(-5rem);
+      }
+      
+      100%{
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
   
