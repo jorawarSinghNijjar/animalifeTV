@@ -4,6 +4,15 @@ $color-primary-light: #c1cffc;
 $color-primary: #4257b3;
 $color-primary-dark: #13133f;
 
+$color-blue-light: #6dd5ed;
+$color-blue-dark: #2193b0;
+
+$color-green-light: #86d9ac;
+$color-green-dark: #2e818c;
+
+$color-brown-light: #e6cd89;
+$color-brown-dark: #bb6b40;
+
 $color-grey-light: #f5efef;
 $color-grey: #777;
 $color-brown: #3f1d0b;
@@ -18,3 +27,6 @@ $gutter-horizontal: 5rem;
 
 //Font size
 $default-font-size: 1.6rem;
+
+// Shadow
+$default-shadow: 1rem 1rem 4rem rgba($color-black, 0.4);

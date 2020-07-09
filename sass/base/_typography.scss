@@ -40,15 +40,9 @@ body {
     animation-fill-mode: forwards; */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-.section-about{
-  font-family: 'Quicksand', sans-serif;
-}
-
 .heading-secondary {
   font-size: 3.5rem;
-  font-weight:500;
+  font-weight: 500;
   text-transform: uppercase;
   background-image: linear-gradient(
     to left,
@@ -78,22 +72,22 @@ body {
       background-image: url("/img/tiger-blue.png");
       background-size: cover;
       position: absolute;
-      top:1.5rem;
-      right:-5rem;
-      animation: fadeInRight .5s ease-out;
+      top: 1.5rem;
+      right: -5rem;
+      animation: fadeInRight 0.5s ease-out;
     }
   }
 }
 
-.heading-tertiary{
-    font-size: $default-font-size;
-    font-weight: 700;
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
 }
 
-.paragraph{
-    font-size: $default-font-size;
-    font-weight: 100;
-    &:not(:last-child){
-        margin-bottom: 3rem;
-    }
+.paragraph {
+  font-size: $default-font-size;
+  font-weight: 100;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
