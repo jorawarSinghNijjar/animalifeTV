@@ -72,7 +72,7 @@
         to right bottom,
         $color-blue-light,
         $color-blue-dark
-      ), url('/img/bird.jpg');
+      ), url('../img/bird.jpg');
     }
 
     &--2{
@@ -80,7 +80,7 @@
         to right bottom,
         $color-brown-light,
         $color-brown-dark
-      ),url('/img/monkey.jpg');
+      ),url('../img/monkey.jpg');
     }
 
     &--3{
@@ -88,7 +88,7 @@
         to right bottom,
         $color-green-light,
         $color-green-dark
-      ),url('/img/fish-card.jpg');
+      ),url('../img/fish-card.jpg');
     }
   }
 
