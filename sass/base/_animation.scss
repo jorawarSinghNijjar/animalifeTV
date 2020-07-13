@@ -69,4 +69,20 @@
           transform: translateX(0);
       }
   }
+
+  @keyframes squirrelMoveRight{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    95%{
+      opacity:1;
+    }
+    
+    100%{
+        opacity:0;
+        transform: translateX(1200%);
+    }
+}
   

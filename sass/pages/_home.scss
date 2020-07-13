@@ -20,16 +20,48 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
-
 }
 
-.section-serial-type{
+.section-serial-type {
   background-color: $color-grey-light;
   padding: 20rem 0 15rem 0;
   margin-top: -15vh;
 }
 
-.section-testimonials{
-    padding: 15rem 0;
-    position: relative;
+.section-testimonials {
+  padding: 15rem 0;
+  position: relative;
+}
+
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary
+  );
+}
+
+.contact {
+  background-image: linear-gradient(
+      80deg,
+      transparent 0%,
+      transparent 49.5%,
+      rgba($color-white, 0.8) 50%
+    ),
+    url("/img/child-deer.jpg");
+  background-size: 100%;
+  background-position: bottom;
+  border-radius: 3px;
+  box-shadow: $default-shadow;
+  height: 50rem;
+  
+
+  &__form{
+    width:50%;
+    padding: 5rem;
+    float: right;
+
+    @include clearfix;
+  }
 }

@@ -1,0 +1,125 @@
+.footer{
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    background-color: $color-grey-dark;
+
+    &__logo-container{
+        text-align: center;
+        margin-bottom:10rem;
+        width:80%;
+        margin:2rem auto;
+    }
+
+    &__logo{
+        height: 15rem;
+    }
+
+    &__navigation{
+        position: relative;
+    }
+
+    &__list{
+        list-style-type: none;
+        width:80%;
+        text-align: center;
+        // border-top: 3px solid $color-primary-light;
+        display: inline-block;
+        z-index: 3;
+
+        &::before{
+            content: "";
+            height:2.5rem;
+            width: 80%;
+            display: inline-block;
+            position: absolute;
+            top:-2rem;
+            left:0;
+            background-image: url('/img/grass.png');
+            background-size: contain;
+            background-position: center;
+            z-index: 2;
+        }
+
+        &::after{
+            content: "";
+            height:8rem;
+            width: 15rem;
+            display: inline-block;
+            position: absolute;
+            top:-8rem;
+            left:-50rem;
+            background-image: url('/img/running-tiger.gif');
+            background-size: cover;
+            background-position: center;
+            animation: squirrelMoveRight 13s linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            z-index: 1;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+        
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link{
+        transition: all .3s;
+        &:link,
+        &:visited{
+            color: $color-grey;
+            text-decoration: none;
+            text-transform: uppercase;
+            display:inline-block;
+            border-radius: 5px;
+            padding:.3rem;
+        }
+
+        &:hover,
+        &:active{
+            color: $color-white;
+            background-color: $color-primary-dark;
+            transform: translateY(.4rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
+    }
+
+    &__copyright{
+        // border-top: 3px solid $color-primary-light;
+        width: 80%;
+        text-align: center;
+        float:right;
+        position: relative;
+
+        &::before{
+            content: "";
+            height:2rem;
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            top:-1.5rem;
+            left:-80%;
+            background-image: url('/img/river.png');
+            background-size: contain;
+            background-position: center;
+            z-index: 1;
+        }
+
+        &::after{
+            content: "";
+            height:2.5rem;
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            top:-2rem;
+            left:0;
+            background-image: url('/img/grass.png');
+            background-size: contain;
+            background-position: center;
+            z-index: 2;
+        }
+    }
+}
