@@ -1,5 +1,6 @@
 /* Animations */
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @keyframes moveInTop {
   0% {
@@ -520,6 +521,65 @@ body {
     display: block;
     width: 90%; }
 
+.modal {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .8s; }
+  .modal__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: .7rem;
+    display: table;
+    overflow: hidden;
+    font-size: 1.3rem;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.2);
+    transition: all .5s; }
+  .modal__left-side {
+    width: 35%;
+    display: table-cell; }
+  .modal__right-side {
+    width: 65%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2rem; }
+  .modal__description {
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid #f5efef;
+    hyphens: auto; }
+  .modal__photo {
+    display: block;
+    width: 100%; }
+  .modal:target {
+    opacity: 1;
+    visibility: visible; }
+  .modal:target .modal__box {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .modal__close-button:link, .modal__close-button:visited {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    color: #4257b3; }
+  .modal__close-button:hover, .modal__close-button:active {
+    color: #FF4136; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right top, rgba(193, 207, 252, 0.8), rgba(66, 87, 179, 0.8)), url("../img/header-background.jpg");
@@ -663,6 +723,98 @@ body {
       background-size: contain;
       background-position: center;
       z-index: 2; }
+
+.menu__checkbox {
+  display: none; }
+
+.menu__button {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  background-color: white;
+  right: 6rem;
+  top: 8rem;
+  z-index: 200;
+  box-shadow: 1rem 1rem 4rem rgba(0, 0, 0, 0.4);
+  cursor: pointer; }
+
+.menu__background {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 8.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#4257b3, #13133f);
+  z-index: 100;
+  transition: all 0.9s cubic-bezier(0.7, 0.06, 0.66, 1.09); }
+
+.menu__nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  transition: all 0.9s cubic-bezier(0.7, 0.06, 0.66, 1.09);
+  opacity: 0;
+  visibility: hidden; }
+
+.menu__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center; }
+
+.menu__item {
+  margin-bottom: 1rem; }
+
+.menu__link:link, .menu__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #ffffff;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  font-family: "Cabin Sketch", cursive;
+  background-image: linear-gradient(120deg, transparent 0, transparent 50%, rgba(255, 255, 255, 0.8) 50%);
+  transition: all 0.3s;
+  background-size: 230%; }
+
+.menu__link:hover, .menu__link:active {
+  background-position: 100%;
+  color: #4257b3;
+  transform: translateX(1rem); }
+
+.menu__list-icon {
+  width: 3rem;
+  display: inline-block;
+  margin-right: 1.5rem;
+  transform: translateY(0.5rem); }
+
+.menu__checkbox:checked ~ .menu__background {
+  transform: scale(70); }
+
+.menu__checkbox:checked ~ .menu__nav {
+  opacity: 1;
+  visibility: visible; }
+
+.menu__icon {
+  color: #4257b3;
+  font-size: 3rem;
+  transition: all .4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.menu__button:hover .menu__icon {
+  transform: scale(1.1) translate(-50%, -50%); }
 
 .section-about {
   background-color: #f5efef;

@@ -10,6 +10,35 @@
     <title>AnimalifeTV | Dive into world of amazement</title>
 </head>
 <body>
+
+    <!-- Navigation -->
+    <div class="menu">
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" class="menu__checkbox">
+        <label for="nav-toggle" class="menu__button">
+            <i class="fas fa-bars menu__icon"></i>
+        </label>
+        <div class="menu__background">&nbsp;</div>
+
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img src="img/bird-house.png" class="menu__list-icon">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img class="menu__list-icon" src="img/happy-koala.svg" />Benefits</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img class="menu__list-icon" src="img/high-definition.svg" />Features</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img class="menu__list-icon" src="img/owl-icon.svg" />Subscribe</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link"><img class="menu__list-icon" src="img/testimonial-icon.png" />Stories</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="header__logo-box">
@@ -103,7 +132,7 @@
         </section>
 
         <!-- Types of subscription -->
-        <section class="section-serial-type">
+        <section class="section-serial-type" id="section-subscription">
             <div class="u-center-text u-margin-bottom-large">
                 <h2 class="heading-secondary">
                     Which way do you want to go ?
@@ -141,7 +170,7 @@
                                         $4.97/mo
                                     </p>
                                 </div>
-                                <a href="#" class="btn btn--white">Subscribe Now!</a>
+                                <a href="#modal" class="btn btn--white">Subscribe Now!</a>
                             </div>
                         </div>
                     </div>
@@ -177,7 +206,7 @@
                                         $9.97/mo
                                     </p>
                                 </div>
-                                <a href="#" class="btn btn--white">Subscribe Now!</a>
+                                <a href="#modal" class="btn btn--white">Subscribe Now!</a>
                             </div>
                         </div>
                     </div>
@@ -213,7 +242,7 @@
                                         $15.97/mo
                                     </p>
                                 </div>
-                                <a href="#" class="btn btn--white">Subscribe Now!</a>
+                                <a href="#modal" class="btn btn--white">Subscribe Now!</a>
                             </div>
                         </div>
                     </div>
@@ -357,6 +386,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__box">
+            <div class="modal__left-side">
+                <img src="img/big-lizard.jpg" alt="Big Lizard" class="modal__photo">
+                <img src="img/koala.jpg" alt="Two Koalas" class="modal__photo">
+            </div>
+            <div class="modal__right-side">
+                <a href="#section-subscription" class="modal__close-button"><i class="far fa-times-circle"></i></a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start watching now !</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet, consectetur adipisicing </h3>
+                <p class="modal__description u-margin-bottom-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quo tempore iure totam eum corporis vitae temporibus praesentium modi ratione sequi hic atque ipsum commodi voluptate laudantium magni, dolorum iusto!Lorem ipsum, dolor sit amet consectetur adipisicing elit.hic atque ipsum commodi voluptate laudantium magni, dolorum iusto!Lorem ipsum, dolor sit amet consectetur adipisicing elit </p>
+                <a href="#" class="btn btn--blue">Add to cart</a>
+            </div>
+        </div>
+    </div>
     
     <!-- <section class="grid-test">
         <div class="row">

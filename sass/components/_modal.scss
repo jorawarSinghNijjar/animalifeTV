@@ -1,0 +1,82 @@
+.modal{
+    width: 100vw;
+    height:100%;
+    background-color: rgba($color-black,.95);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s;
+
+    &__box{
+        @include center-vh;
+        width:60%;
+        background-color: $color-white;
+        border-radius: .7rem;
+        display: table;
+        overflow: hidden;
+        font-size: 1.3rem;
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(.2);
+        transition: all .5s;
+    }
+
+    &__left-side{
+        width: 35%;
+        display: table-cell;
+    }
+
+    &__right-side{
+        width: 65%;
+        display: table-cell;
+        vertical-align: middle;
+        padding:2rem;
+    }
+
+    &__description{
+        column-count: 2;
+        column-gap: 2rem;
+        column-rule: 1px solid $color-grey-light;
+        hyphens: auto;
+    }
+
+    &__photo{
+        display: block;
+        width:100%;
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__box{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close-button{
+
+        &:link,
+        &:visited{
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            color: $color-primary;
+        }
+
+        &:hover,
+        &:active{
+            color: $color-red;
+        }
+
+    }
+
+
+}

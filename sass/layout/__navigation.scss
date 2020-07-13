@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+
+.menu {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    background-color: white;
+    right: 6rem;
+    top: 8rem;
+    z-index: 200;
+    box-shadow: $default-shadow;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 8.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-primary, $color-primary-dark);
+    z-index: 100;
+    transition: all .9s cubic-bezier(.7,.06,.66,1.09);
+
+    // transform: scale(70);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    transition: all .9s cubic-bezier(.7,.06,.66,1.09);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__list {
+    @include center-vh;
+
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+        display: inline-block;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 3rem;
+      color: $color-white;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      padding: 0.5rem 2rem;
+      font-family: "Cabin Sketch", cursive;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0,
+        transparent 50%,
+        rgba($color-white, 0.8) 50%
+      );
+      transition: all 0.3s;
+      background-size: 230%;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__list-icon{
+      width: 3rem;
+      display:inline-block;
+      margin-right:1.5rem;
+      transform: translateY(.5rem);
+  }
+
+  &__checkbox:checked ~ &__background{
+    transform: scale(70);
+  }
+
+  &__checkbox:checked ~ &__nav{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__icon{
+      color: $color-primary;
+      font-size: 3rem;
+      transition: all .4s;
+      @include center-vh;
+  }
+
+  &__button:hover &__icon{
+      transform: scale(1.1)translate(-50%,-50%);
+  }
+}
