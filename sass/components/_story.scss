@@ -8,6 +8,16 @@
     padding-left: 9rem;
     transform: skewX(-12deg);
     font-size: $default-font-size;
+
+    @include design(tab-portrait){
+        width:100%;
+        padding:4rem;
+        padding-left:7rem;
+    }
+
+    @include design(tab-portrait){
+        transform: skewX(0);
+    }
     
 
     &__image-shape{
@@ -20,6 +30,10 @@
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @include design(phone){
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__user-image{
@@ -46,6 +60,10 @@
     &__content{
         font-weight:200;
         transform: skewX(12deg);
+
+        @include design(phone){
+            transform: skewX(0);
+        }
     }
 
     &:hover &__image-caption{

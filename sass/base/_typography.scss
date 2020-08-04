@@ -4,7 +4,7 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: $color-grey;
-  padding: 3rem;
+  
   cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat1019.cur), auto !important;
 }
 
@@ -22,8 +22,13 @@ body {
     font-weight: 700;
     letter-spacing: 3.5rem;
     animation-name: moveInTop;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include design(phone){
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -31,7 +36,12 @@ body {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1.43rem;
-    animation: zoomIn 2s ease-out;
+    animation: zoomIn 1s ease-out;
+
+    @include design(phone){
+      letter-spacing: .5rem;
+    }
+
   }
 }
 
@@ -58,6 +68,13 @@ body {
   transition: all 0.2s;
   position: relative;
 
+  @include design(tab-portrait){
+    font-size: 3rem;
+  }
+
+  @include design(phone){
+    font-size: 2.5rem;
+  }
   &:hover {
     transform: skewY(0) skewX(-15deg);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
@@ -70,7 +87,7 @@ body {
       display: inline-block;
       width: 5rem;
       height: 5rem;
-      background-image: url("/img/tiger-blue.png");
+      background-image: url("../img/tiger-blue.png");
       background-size: cover;
       position: absolute;
       top: 1.5rem;

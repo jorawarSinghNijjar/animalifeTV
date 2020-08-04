@@ -21,18 +21,37 @@
         opacity: 1;
         transform: translate(-50%,-50%) scale(.2);
         transition: all .5s;
+        
+
+        @include design(tab-portrait){
+            width:80%;
+        }
     }
 
     &__left-side{
         width: 35%;
         display: table-cell;
+
+        @include design(tab-portrait){
+            width:100%;
+            display: block;
+            padding:2rem;
+            padding-top: 4rem;
+            text-align: center;
+        }
     }
 
     &__right-side{
         width: 65%;
         display: table-cell;
         vertical-align: middle;
-        padding:2rem;
+        padding:3rem;
+
+        @include design(tab-portrait){
+            width:100%;
+            display: block;
+            text-align: center;
+        }
     }
 
     &__description{
@@ -40,11 +59,21 @@
         column-gap: 2rem;
         column-rule: 1px solid $color-grey-light;
         hyphens: auto;
+
+        @include design(tab-portrait){
+            text-align: left;
+        }
     }
 
     &__photo{
         display: block;
         width:100%;
+
+        @include design(tab-portrait){
+            width:50%;
+            float: left;
+            display: inline-block;
+        }
     }
 
     &:target{
@@ -62,13 +91,18 @@
         &:link,
         &:visited{
             position: absolute;
-            top: 2rem;
-            right: 3rem;
+            top: 1rem;
+            right: 2rem;
             font-size: 3rem;
             text-decoration: none;
             display: inline-block;
             transition: all .2s;
             color: $color-primary;
+
+            @include design(tab-portrait){
+                top:0;
+                right:1rem;
+            }
         }
 
         &:hover,

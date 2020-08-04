@@ -1,7 +1,11 @@
 .footer{
-    padding: 1rem 0;
+    padding: 8rem 0;
     font-size: 1.3rem;
     background-color: $color-grey-dark;
+
+    @include design(tab-portrait){
+        padding: 6rem 0;
+    }
 
     &__logo-container{
         text-align: center;
@@ -16,6 +20,10 @@
 
     &__navigation{
         position: relative;
+        @include design(tab-portrait){
+            width:100%;
+        }
+
     }
 
     &__list{
@@ -25,6 +33,11 @@
         // border-top: 3px solid $color-primary-light;
         display: inline-block;
         z-index: 3;
+
+        @include design(tab-portrait){
+            width:100%;
+            text-align:center;
+        }
 
         &::before{
             content: "";
@@ -38,6 +51,9 @@
             background-size: contain;
             background-position: center;
             z-index: 2;
+            @include design(tab-portrait){
+                width:100%;
+            }
         }
 
         &::after{
@@ -94,6 +110,11 @@
         float:right;
         position: relative;
 
+        @include design(tab-portrait){
+            width:100%;
+            float:none;
+        }
+
         &::before{
             content: "";
             height:2rem;
@@ -106,6 +127,11 @@
             background-size: contain;
             background-position: center;
             z-index: 1;
+
+            @include design(tab-portrait){
+                display: none;
+            }
+
         }
 
         &::after{
@@ -120,6 +146,9 @@
             background-size: contain;
             background-position: center;
             z-index: 2;
+            @include design(tab-portrait){
+                display: none;
+            }
         }
     }
 }
