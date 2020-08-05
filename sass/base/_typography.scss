@@ -14,6 +14,7 @@ body {
   margin-bottom: 6rem;
 
   /* to avoid shakiness in animation */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
   &--main {
@@ -22,8 +23,8 @@ body {
     font-weight: 700;
     letter-spacing: 3.5rem;
     animation-name: moveInTop;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
 
     @include design(phone){
       letter-spacing: 1rem;
@@ -36,7 +37,7 @@ body {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1.43rem;
-    animation: zoomIn 1s ease-out;
+    animation: zoomIn 1.5s ease-in;
 
     @include design(phone){
       letter-spacing: .5rem;
