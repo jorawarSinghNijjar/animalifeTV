@@ -2,6 +2,7 @@
     padding: 8rem 0;
     font-size: 1.3rem;
     background-color: $color-grey-dark;
+    overflow: hidden;
 
     @include design(tab-portrait){
         padding: 6rem 0;
@@ -67,7 +68,7 @@
             background-image: url('../img/running-tiger.gif');
             background-size: cover;
             background-position: center;
-            animation: squirrelMoveRight 10s linear;
+            animation: squirrelMoveRight 7s linear;
             animation-iteration-count: infinite;
             animation-fill-mode: forwards;
             z-index: 1;

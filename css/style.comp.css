@@ -54,7 +54,7 @@
     opacity: 1; }
   100% {
     opacity: 0;
-    transform: translateX(1200%); } }
+    transform: translateX(1100%); } }
 
 body {
   font-family: "Acme", sans-serif;
@@ -490,7 +490,7 @@ body {
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border: none; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 56.25em) {
       .story__image-shape {
         transform: translateX(-3rem) skewX(0); } }
   .story__user-image {
@@ -513,7 +513,7 @@ body {
   .story__content {
     font-weight: 200;
     transform: skewX(12deg); }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 56.25em) {
       .story__content {
         transform: skewX(0); } }
   .story:hover .story__image-caption {
@@ -530,7 +530,7 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  opacity: 20%;
+  opacity: 50%;
   overflow: hidden; }
   .bg-video__content {
     width: 100%;
@@ -786,7 +786,8 @@ body {
 .footer {
   padding: 8rem 0;
   font-size: 1.3rem;
-  background-color: #373943; }
+  background-color: #373943;
+  overflow: hidden; }
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 6rem 0; } }
@@ -838,7 +839,7 @@ body {
       background-image: url("../img/running-tiger.gif");
       background-size: cover;
       background-position: center;
-      animation: squirrelMoveRight 10s linear;
+      animation: squirrelMoveRight 7s linear;
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
       z-index: 1; }
@@ -1008,7 +1009,8 @@ body {
   font-family: "Quicksand", sans-serif; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 20rem 0;
+      margin-top: -15vh; } }
 
 .section-features {
   padding: 20rem 0;
@@ -1021,7 +1023,8 @@ body {
     transform: skewY(-5deg); }
   @media only screen and (max-width: 56.25em) {
     .section-features {
-      padding: 10rem 0; } }
+      padding: 10rem 0;
+      margin-top: -15vh; } }
 
 .section-serial-type {
   background-color: #f5efef;
@@ -1029,7 +1032,8 @@ body {
   margin-top: -15vh; }
   @media only screen and (max-width: 56.25em) {
     .section-serial-type {
-      padding: 15rem 0 10rem 0; } }
+      padding: 15rem 0 10rem 0;
+      margin-top: -5vh; } }
 
 .section-testimonials {
   padding: 15rem 0;
@@ -1074,4 +1078,5 @@ body {
         width: 60%; } }
     @media only screen and (max-width: 56.25em) {
       .contact__form {
-        width: 100%; } }
+        width: 100%;
+        float: none; } }
